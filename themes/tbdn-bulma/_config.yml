@@ -1,0 +1,8 @@
+# Header
+menu:
+  tomburns.net: /
+  About: /about
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More

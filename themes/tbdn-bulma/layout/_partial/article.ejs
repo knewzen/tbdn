@@ -1,0 +1,33 @@
+<div class="box">
+  <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+      <% if (post.title) { %>
+        <header class="article-header level">
+          <div class="level-left">
+            <h1 class="title is-2 level-item">
+              <%- post.title %>
+            </h1>
+          </div>
+          <div class="level-right">
+              <a class="icon level-item" href="<%- post.permalink %>">
+                <i class="fa fa-link"></i>
+              </a>
+          </div>
+        </header>
+        <hr>
+      <% } %>
+      <div class="article-entry content" itemprop="articleBody">
+        <% if (post.excerpt && index){ %>
+          <%- post.excerpt %>
+          <% if (theme.excerpt_link){ %>
+            <p class="article-more-link">
+              <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            </p>
+          <% } %>
+        <% } else { %>
+          <%- post.content %>
+        <% } %>
+      </div>
+      <footer class="article-footer">
+      </footer>
+  </article>
+</div>

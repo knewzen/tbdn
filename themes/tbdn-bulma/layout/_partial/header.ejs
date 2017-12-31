@@ -1,0 +1,18 @@
+<header class="hero is-primary">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <% for (var i in theme.menu) { %>
+        <a class="navbar-item" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% } %>
+    </div>
+    <div class="navbar-end">
+    <% if (theme.rss){ %>
+        <span class="icon is-large">
+          <a id="nav-rss-link" class="icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+            <i class="fa fa-lg fa-rss"></i>
+          </a>
+        </span>      
+      <% } %>
+    </div>
+  </nav>
+</header>
