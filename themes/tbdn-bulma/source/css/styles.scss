@@ -24,6 +24,7 @@ $github-invert: findColorInvert($github);
 @import "bulma/sass/utilities/derived-variables.sass";
 
 $code: $dark;
+$link: $purple;
 
 $addColors: (
   "twitter":($twitter, $twitter-invert),
@@ -34,3 +35,8 @@ $colors: map-merge($colors, $addColors);
 
 // 6. Import the rest of Bulma
 @import "bulma/bulma";
+
+article .content a {
+    text-decoration: underline;
+}
+
